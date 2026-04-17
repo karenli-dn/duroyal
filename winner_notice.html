@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中獎人注意事項</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+            line-height: 1.8;
+            font-size: clamp(14px, 1.5vw, 16px);
+        }
+        
+        .dotted-background {
+            background-color: #d6e58a;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5) 2px, transparent 2px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            width: 100%;
+            min-height: 100vh;
+            padding: clamp(20px, 4vw, 40px) clamp(10px, 2vw, 20px);
+        }
+        
+        .content-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: clamp(25px, 4vw, 40px);
+            border-radius: clamp(8px, 1.5vw, 12px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        h1 {
+            color: #638c0b;
+            font-size: clamp(22px, 4.5vw, 32px);
+            margin-bottom: clamp(15px, 2.5vw, 20px);
+            text-align: center;
+            padding-bottom: clamp(15px, 2.5vw, 20px);
+            border-bottom: 3px solid #d6e58a;
+        }
+        
+        .intro {
+            text-align: center;
+            padding: clamp(15px, 2.5vw, 20px) 0;
+            margin-bottom: clamp(20px, 3vw, 30px);
+            font-weight: bold;
+            font-size: clamp(15px, 1.8vw, 17px);
+            color: #2c3e50;
+        }
+        
+        ol {
+            counter-reset: item;
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        ol > li {
+            counter-increment: item;
+            margin-bottom: clamp(18px, 3vw, 25px);
+            position: relative;
+            padding-left: clamp(35px, 5vw, 40px);
+            color: #34495e;
+            font-size: clamp(14px, 1.5vw, 16px);
+        }
+        
+        ol > li:before {
+            content: counter(item) ".";
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+            font-size: clamp(16px, 2vw, 18px);
+            color: #b8cc52;
+            width: 30px;
+        }
+        
+        /* 子項目編號 */
+        ol ol {
+            margin-top: clamp(12px, 2vw, 15px);
+            padding-left: clamp(15px, 2.5vw, 20px);
+        }
+        
+        ol ol > li {
+            padding-left: clamp(25px, 4vw, 30px);
+            margin-bottom: clamp(10px, 1.5vw, 12px);
+            font-size: clamp(13px, 1.4vw, 15px);
+        }
+        
+        ol ol > li:before {
+            font-size: clamp(14px, 1.8vw, 16px);
+            color: #b8cc52;
+        }
+        
+        /* 強調文字 */
+        strong {
+            color: #c0392b;
+        }
+        
+        /* 小手機 */
+        @media (max-width: 375px) {
+            .content-container {
+                padding: 20px 15px;
+            }
+            
+            ol > li {
+                padding-left: 30px;
+            }
+        }
+        
+        /* 手機 */
+        @media (max-width: 576px) {
+            .dotted-background {
+                padding: 20px 10px;
+            }
+        }
+        
+        /* 平板 */
+        @media (min-width: 577px) and (max-width: 768px) {
+            .content-container {
+                padding: 30px 25px;
+            }
+        }
+        
+        /* 大螢幕 */
+        @media (min-width: 1400px) {
+            body {
+                font-size: 16px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            .intro {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dotted-background">
+        <div class="content-container">
+            <h1>中獎人注意事項</h1>
+            
+            <div class="intro">
+                中獎者請下載「機會中獎憑證」，以利順利審核。
+            </div>
+            
+            <ol>
+                <li>中獎者需於兌獎收件截止時間前(以郵戳為憑)，將以下兌獎資料郵寄到「台北市內湖區瑞光路513巷26號6樓 明日方舟x杜老爺 活動小組」收，逾期視同放棄中獎資格。中獎者不得因任何因素，要求主辦單位延後兌獎收件截止時間。
+                    <ol>
+                        <li>填妥中獎回覆函(含本人親筆簽名)</li>
+                        <li>黏貼身分證正反面影印本</li>
+                        <li>中獎發票與消費明細(活動中獎發票將由主辦單位留存、使用，不另歸還消費者)</li>
+                        <li>若需繳交機會中獎所得稅者，需附上已匯款稅金的「匯款單」正本或影本或其他匯款證明文件</li>
+                    </ol>
+                </li>
+                
+                <li>參與本活動之發票，發票明細須清楚辨識杜老爺甜筒冰淇淋 單支/家庭號（高級巧克力甜筒/ 雙倍巧克力甜筒）。若無法提供清楚發票與消費明細，恕無法兌換。</li>
+                
+                <li>郵寄過程若發生遺失或破損，導致無法辨認中獎者基本資料時，或中獎資格審核未通過，視同放棄中獎資格，主辦單位將不做任何通知。如有任何不可歸責於主辦單位之事由，而使中獎者寄回的兌獎資料遺失，主辦單位不負任何法律責任，中獎者亦不得異議。</li>
+                
+                <li>依稅法規定，中獎者若為台澎金馬地區戶籍者，中獎價值超過新臺幣1,001元(含)以上者，需繳交身分證正反面影本供報稅使用，年度報稅時將計入個人所得， 財政部臺北國稅局實施「憑單無紙化」，自2014年起所得稅各式憑單符合一定情形者，憑單填發單位如期向國稅局辦理憑單申報後，原則上免寄發憑單給納稅義務人。中獎者需於隔年5月底前完成申報。非台澎金馬地區戶籍者(即在台澎金馬內居住未達 183天之本國人及外國人)不論中獎者所得之金額,須就中獎所得扣繳20% 機會中獎稅，始發予中獎獎項，執行單位皆會開立扣繳憑單。中獎者若為台澎金馬地區戶籍者且中獎獎項價值超過新臺幣20,010 元(含)以上，中獎者須先負擔10%機會中獎所得稅。若中獎者不願先行繳納本項稅金，視同放棄中獎資格，且不得異議。中獎者參加本活動而需支付任何稅捐皆為中獎者之法定義務，概與主辦單位/執行單位無關。前述稅捐法規如有更新或變動者，依修正後之規定辦理。匯款手續費煩請中獎者自行負擔。匯款完畢後，請連同匯款證明一併寄回。</li>
+                
+                <li>未滿20歲之中獎者，除了中獎者身分證正反面影本外，須另附任一法定代理人之身分證正反面影本協同辦理領獎及一切相關手續方能領獎。中獎者如未滿 20 歲且尚未領得身分證者，中獎者應提供中獎者法定代理人本人之身分證正、反面影本及中獎者之戶口名簿影本。</li>
+                
+                <li>兌獎資料逾期或資料不符、不齊全、或拒納稅金者，均視同放棄兌獎權利。</li>
+                
+                <li>領獎確認書上所填寫之身分資料需和參加本活動之資料相同，如有不同，主辦單位有權取消其參加或中獎資格，並恕不另行通知。</li>
+                
+                <li>活動獎品到貨日期依實際商品整備進度及貨運配送狀況為主。</li>
+                
+                <li>活動詳情以活動網頁公告、杜老爺冰淇淋官方網站為準，或洽杜老爺讚不絕口活動小組聯繫專線：(02)2535-2145。</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
