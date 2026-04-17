@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白色區塊 + 兩側裝飾</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            background: white;
+        }
+
+        /* 左側無縫拼接背景 */
+        body::before {
+            content: '';
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: calc((100vw - 1450px) / 2);
+            background: url('https://karenli-dn.github.io/duroyal/c.jpg') repeat-y left center;
+            background-size: 100% auto; /* 寬度填滿，高度自動 */
+            z-index: 1;
+        }
+
+        /* 右側無縫拼接背景 */
+        body::after {
+            content: '';
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: calc((100vw - 1450px) / 2);
+            background: url('https://karenli-dn.github.io/duroyal/c.jpg') repeat-y right center;
+            background-size: 100% auto; /* 寬度填滿，高度自動 */
+            transform: scaleX(-1); /* 鏡像翻轉 */
+            z-index: 1;
+        }
+
+        /* 中間白色區塊 */
+        .white-container {
+            position: relative;
+            z-index: 10;
+            width: 1450px;
+            min-height: 100vh;
+            background: white;
+        }
+
+        /* 手機版：直接全白，無底圖 */
+        @media (max-width: 768px) {
+            body::before,
+            body::after {
+                display: none;
+            }
+
+            .white-container {
+                width: 100%;
+            }
+        }
+
+        /* 平板版：也拿掉底圖 */
+        @media (max-width: 1450px) {
+            body::before,
+            body::after {
+                display: none;
+            }
+
+            .white-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="white-container">
+        <!-- 白色區塊內容 -->
+    </div>
+</body>
+</html>
