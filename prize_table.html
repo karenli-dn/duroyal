@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>獎品介紹</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+            line-height: 1.8;
+            font-size: clamp(14px, 1.5vw, 16px);
+        }
+        
+        .dotted-background {
+            background-color: #d6e58a;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5) 2px, transparent 2px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            width: 100%;
+            min-height: 100vh;
+            padding: clamp(20px, 4vw, 40px) clamp(10px, 2vw, 20px);
+        }
+        
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: clamp(8px, 1.5vw, 12px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+        
+        h1 {
+            color: #638c0b;
+            font-size: clamp(22px, 4.5vw, 32px);
+            text-align: center;
+            padding: clamp(25px, 4vw, 40px) clamp(25px, 4vw, 40px) clamp(15px, 2.5vw, 20px);
+            border-bottom: 3px solid #d6e58a;
+            margin: 0;
+        }
+        
+        .table-wrapper {
+            padding: clamp(25px, 4vw, 40px);
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: clamp(12px, 2vw, 16px);
+            text-align: left;
+            font-size: clamp(14px, 1.5vw, 16px);
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        td {
+            color: #34495e;
+        }
+        
+        /* 第一欄（獎次）樣式 */
+        td:first-child {
+            font-weight: bold;
+            color: #638c0b;
+            text-align: center;
+            font-size: clamp(15px, 1.8vw, 18px);
+        }
+        
+        /* 獎品數量欄位 */
+        td:last-child {
+            text-align: center;
+            color: #638c0b;
+        }
+        
+        /* 手機響應式 */
+        @media (max-width: 576px) {
+            .dotted-background {
+                padding: 20px 10px;
+            }
+            
+            .table-wrapper {
+                padding: 20px 15px;
+            }
+            
+            table {
+                font-size: 13px;
+            }
+            
+            th, td {
+                padding: 10px 8px;
+            }
+        }
+        
+        /* 平板 */
+        @media (min-width: 577px) and (max-width: 768px) {
+            .table-wrapper {
+                padding: 30px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dotted-background">
+        <div class="content-container">
+            <h1><strong>獎品介紹</strong></h1>
+            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>獎次</th>
+                            <th>獎品名稱</th>
+                            <th>獎品價值</th>
+                            <th>獎品數量</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>壹獎</td>
+                            <td>Apple iPhone 17 Pro 256G</td>
+                            <td>NTD 39,900 /支</td>
+                            <td>共1支</td>
+                        </tr>
+                        <tr>
+                            <td>貳獎</td>
+                            <td>Galaxy S25 Ultra 256G</td>
+                            <td>NTD 43,900/支</td>
+                            <td>共1支</td>
+                        </tr>
+                        <tr>
+                            <td>貳獎</td>
+                            <td>Apple Watch Series 11 一鋁殼</td>
+                            <td>NTD 12,900/式</td>
+                            <td>共2式</td>
+                        </tr>
+                        <tr>
+                            <td>參獎</td>
+                            <td>AirPods Pro 3</td>
+                            <td>NTD 7,490/式</td>
+                            <td>共3式</td>
+                        </tr>
+                        <tr>
+                            <td>肆獎</td>
+                            <td>合金重工系列成品模型羅德島</td>
+                            <td>NTD 5,990/個</td>
+                            <td>共1個</td>
+                        </tr>
+                        <tr>
+                            <td>肆獎</td>
+                            <td>明日方舟×雷蛇-機械鍵盤-羅德島限定款</td>
+                            <td>NTD 3,495/個</td>
+                            <td>共1個</td>
+                        </tr>
+                        <tr>
+                            <td>肆獎</td>
+                            <td>發光擺件-聚能構件系列《"文明的存續"款》</td>
+                            <td>NTD 790/個</td>
+                            <td>共1個</td>
+                        </tr>
+                        <tr>
+                            <td>肆獎</td>
+                            <td>角色禮盒-雪山降臨</td>
+                            <td>NTD 795/個</td>
+                            <td>共2個</td>
+                        </tr>
+                        <tr>
+                            <td>肆獎</td>
+                            <td>Q版壓克力印章-隨心印系列</td>
+                            <td>NTD 150/個</td>
+                            <td>共40個</td>
+                        </tr>
+                        <tr>
+                            <td>肆獎</td>
+                            <td>山山兔毛絨玩偶</td>
+                            <td>NTD 995/個</td>
+                            <td>共5個</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
